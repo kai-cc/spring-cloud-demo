@@ -1,2 +1,2 @@
-# springcloud-demo
-springcloud模板工程
+# spring-cloud-demo
+spring-cloud模板工程
