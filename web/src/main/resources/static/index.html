@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <button id="user">查看所有用户信息</button>
+    <button id="vip">查看Vip用户信息</button>
+
+    <script src="/web/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $("#user").click(function() {
+            console.log("查看所有用户信息");
+            $.ajax({
+                url:"/user/query-all-user"
+                ,type:"get"
+                ,success:function (data) {
+                    console.log(data);
+                }
+            });
+        });
+        $("#vip").click(function() {
+            console.log("查看Vip用户信息");
+            $.ajax({
+                url:"/web/query-vip-user"
+                ,type:"get"
+                ,success:function (data) {
+                    console.log(data);
+                }
+            });
+        })
+    </script>
+
+</body>
+</html>
